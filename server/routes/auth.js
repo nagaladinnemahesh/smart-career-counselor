@@ -3,6 +3,7 @@ const router = express.Router();
 const bcrypt = require('bcryptjs');
 const User = require('../models/User');
 const jwt = require('jsonwebtoken');
+const verifyToken = require('../middleware/authMiddleware');
 
 router.post('/register', async (req, res) => {
   const { name, email, password } = req.body;
@@ -47,5 +48,9 @@ router.post('/login', async (req, res) => {
   res.status(200).json({ message: 'Login successful', token });
 });
 
+// 🔐 GET /dashboard (Protected Route)
+router.get('/dashboard', verifyToken, (req, res) => {
+  res.json({ message: `Welcome to your dashboard, user ID: ${req.user.userId}` });
+});
 
 module.exports = router;
