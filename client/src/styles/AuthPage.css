@@ -1,0 +1,11 @@
+.auth-container {
+  max-width: 800px;
+  margin: 4rem auto;
+  background: #fff;
+}
+
+.auth-image {
+  background: url('https://images.unsplash.com/photo-1573496267526-08a69e46a409') center/cover no-repeat;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
