@@ -1,0 +1,14 @@
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,128,0.5)),
+              url('https://images.unsplash.com/photo-1581090700227-4c4e3c1d24ce') center/cover no-repeat;
+  height: 80vh;
+}
+
+.features h5 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.footer {
+  background-color: #212529;
+}
